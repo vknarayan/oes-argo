@@ -20,6 +20,7 @@ spec:
                 containers:
                   - name: oes-analysis-job
                     image: opsmx11/verifyjob:v5
+                    imagePullPolicy: Always
                     env:
                       - name: EXPERIMENT_HASH
                         value: "{{args.experiment-hash}}"
