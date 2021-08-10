@@ -1,0 +1,31 @@
+kind: AnalysisTemplate
+apiVersion: argoproj.io/v1alpha1
+metadata:
+  name: oes-analysis-job
+spec:
+  args:
+    - name: experiment-hash
+    - name: canary-hash
+    - name: baseline-hash
+  metrics:
+    - name: oes-analysis-job
+      count: 1
+      provider:
+        job:
+          spec:
+            backoffLimit: 0
+            template:
+              spec:
+                restartPolicy: Never
+                containers:
+                  - name: oes-analysis-job
+                    image: opsmx11/verifyjob:v5
+                    env:
+                      - name: EXPERIMENT_HASH
+                        value: "{{args.experiment-hash}}"
+                      - name: BASELINE_HASH
+                        value: "{{args.baseline-hash}}"
+                      - name: CANARY_HASH
+                        value: "{{args.canary-hash}}"
+                      - name: LIFETIME_HOURS
+                        value: "0.05"
