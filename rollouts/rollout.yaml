@@ -1,21 +1,21 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
-  name: argo-oes-canary-rollout
+  name: oes-argo-rollout
 spec:
   replicas: 1
   revisionHistoryLimit: 2
   selector:
     matchLabels:
-      app: argo-oes-canary-rollout
+      app: oes-argo-rollout
   template:
     metadata:
       labels:
-        app: argo-oes-canary-rollout
+        app: oes-argo-rollout
     spec:
       containers:
         - name: rollouts-baseline
-          image: docker.io/opsmxdev/issuegen:gradle-issugen-14
+          image: docker.io/opsmxdev/issuegen:1.1.0
           imagePullPolicy: Always
           ports:
             - containerPort: 8088
