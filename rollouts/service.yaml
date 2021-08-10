@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: oes-argo-svc
+  name: issuegen-svc
   labels:
     app: oes-argo-rollout
 spec:
