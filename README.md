@@ -1,2 +1,2 @@
 # oes-argo
-This is test argo rollouts
+Manifest for Argo Rollouts with OES Continuous Verification
