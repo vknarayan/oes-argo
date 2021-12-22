@@ -32,3 +32,5 @@ spec:
                         value: "0.05"
                       - name: LOG_ENABLED
                         value: "false"
+                      - name: GATE_URL
+                        value: "https://observer-ui.aoa.oes.opsmx.org/autopilot/api/v3/registerCanary"
