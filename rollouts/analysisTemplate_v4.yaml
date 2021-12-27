@@ -31,6 +31,6 @@ spec:
                       - name: LIFETIME_HOURS
                         value: "0.05"
                       - name: LOG_ENABLED
-                        value: "false"
+                        value: "true"
                       - name: GATE_URL
                         value: "https://observer-gate.aoa.oes.opsmx.org/autopilot/api/v3/registerCanary"
