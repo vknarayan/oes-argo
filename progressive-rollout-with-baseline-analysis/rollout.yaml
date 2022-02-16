@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: rollouts-baseline
-          image: docker.io/opsmxdev/issuegen:v2.1.5
+          image: docker.io/opsmxdev/issuegen:v2.1.6
           imagePullPolicy: Always
           ports:
             - containerPort: 8088
@@ -23,7 +23,7 @@ spec:
     canary:
       steps:
         - setWeight: 20
-        - pause: { duration: 20s }
+        - pause: { duration: 5m }
         - experiment:
             templates:
               - name: baseline
@@ -43,7 +43,7 @@ spec:
                   - name: canary-hash
                     value: "{{templates.canary.podTemplateHash}}"
         - setWeight: 60
-        - pause: { duration: 1m }
+        - pause: { duration: 5m }
         - experiment:
             templates:
               - name: baseline
@@ -63,4 +63,22 @@ spec:
                   - name: canary-hash
                     value: "{{templates.canary.podTemplateHash}}"
         - setWeight: 80
-        - pause: { duration: 1m }
+        - pause: { duration: 5m }
+        - experiment:
+            templates:
+              - name: baseline
+                specRef: stable
+              - name: canary
+                specRef: canary
+            analyses:
+              - name : oes-analysis-job
+                requiredForCompletion: true
+                templateName: oes-analysis-job
+                args:
+                  - name: experiment-hash
+                    valueFrom:
+                      podTemplateHashValue: Latest
+                  - name: baseline-hash
+                    value: "{{templates.baseline.podTemplateHash}}"
+                  - name: canary-hash
+                    value: "{{templates.canary.podTemplateHash}}"        
