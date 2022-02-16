@@ -33,7 +33,7 @@ spec:
                       - name: LOG_ENABLED
                         value: "false"
                       - name: APPLICATION
-                        value: progressiverolloutwithbaselineanalysis"
+                        value: "progressiverolloutwithbaselineanalysis"
                       - name: SERVICE_NAME
                         value: "baseline-analysis"
                       - name: GATE_URL
