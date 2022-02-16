@@ -32,5 +32,9 @@ spec:
                         value: "0.1"
                       - name: LOG_ENABLED
                         value: "false"
+                      - name: APPLICATION
+                        value: progressiverolloutwithbaselineanalysis"
+                      - name: SERVICE_NAME
+                        value: "baseline-analysis"
                       - name: GATE_URL
                         value: "https://observer-gate.aoa.oes.opsmx.org/autopilot/api/v3/registerCanary"
