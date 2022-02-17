@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: canary-svc
+  labels:
+    app: oes-argo-rollout-canary
+spec:
+  selector:
+    app: oes-argo-rollout-canary
+  ports:
+    - port: 3100
+      targetPort: 8088
+  type: ClusterIP

@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: production-svc
+  labels:
+    app: oes-argo-rollout-prod
+spec:
+  selector:
+    app: oes-argo-rollout-prod
+  ports:
+    - port: 3100
+      targetPort: 8088
+  type: ClusterIP
