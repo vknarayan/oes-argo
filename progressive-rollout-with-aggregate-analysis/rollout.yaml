@@ -21,64 +21,15 @@ spec:
             - containerPort: 8088
   strategy:
     canary:
+      canaryService: canary-svc
+      stableService: production-svc
+      trafficRouting:
+        nginx:
+          stableIngress: prod-ingress
       steps:
         - setWeight: 20
         - pause: { duration: 20s }
-        - experiment:
-            templates:
-              - name: baseline
-                specRef: stable
-              - name: canary
-                specRef: canary
-            analyses:
-              - name : oes-analysis-job
-                requiredForCompletion: true
-                templateName: oes-analysis-job
-                args:
-                  - name: experiment-hash
-                    valueFrom:
-                      podTemplateHashValue: Latest
-                  - name: baseline-hash
-                    value: "{{templates.baseline.podTemplateHash}}"
-                  - name: canary-hash
-                    value: "{{templates.canary.podTemplateHash}}"
         - setWeight: 60
         - pause: { duration: 30s }
-        - experiment:
-            templates:
-              - name: baseline
-                specRef: stable
-              - name: canary
-                specRef: canary
-            analyses:
-              - name : oes-analysis-job
-                requiredForCompletion: true
-                templateName: oes-analysis-job
-                args:
-                  - name: experiment-hash
-                    valueFrom:
-                      podTemplateHashValue: Latest
-                  - name: baseline-hash
-                    value: "{{templates.baseline.podTemplateHash}}"
-                  - name: canary-hash
-                    value: "{{templates.canary.podTemplateHash}}"
         - setWeight: 80
         - pause: { duration: 30s }
-        - experiment:
-            templates:
-              - name: baseline
-                specRef: stable
-              - name: canary
-                specRef: canary
-            analyses:
-              - name : oes-analysis-job
-                requiredForCompletion: true
-                templateName: oes-analysis-job
-                args:
-                  - name: experiment-hash
-                    valueFrom:
-                      podTemplateHashValue: Latest
-                  - name: baseline-hash
-                    value: "{{templates.baseline.podTemplateHash}}"
-                  - name: canary-hash
-                    value: "{{templates.canary.podTemplateHash}}"        
