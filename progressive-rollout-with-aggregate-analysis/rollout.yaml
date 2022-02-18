@@ -28,7 +28,7 @@ spec:
         args:
           - name: canary-hash
             value: "{{templates.canary.podTemplateHash}}"
-          - name: stable-hash
+          - name: baseline-hash
             value: "{{templates.stable.podTemplateHash}}"
           - name: experiment-hash
             value: "dummy-hash-123"
