@@ -35,6 +35,6 @@ spec:
                       - name: APPLICATION
                         value: "progressiverolloutwithaggregateanalysis"
                       - name: SERVICE_NAME
-                        value: "baseline-analysis"
+                        value: "aggregate-analysis"
                       - name: GATE_URL
                         value: "https://observer-gate.aoa.oes.opsmx.org/autopilot/api/v3/registerCanary"
