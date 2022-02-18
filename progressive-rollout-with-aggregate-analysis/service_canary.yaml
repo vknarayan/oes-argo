@@ -3,10 +3,10 @@ kind: Service
 metadata:
   name: canary-svc
   labels:
-    app: oes-argo-rollout-canary
+    app: oes-argo-rollout
 spec:
   selector:
-    app: oes-argo-rollout-canary
+    app: oes-argo-rollout
   ports:
     - port: 3100
       targetPort: 8088
