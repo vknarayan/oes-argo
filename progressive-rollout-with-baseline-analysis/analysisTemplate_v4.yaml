@@ -39,4 +39,4 @@ spec:
                       - name: EXPERIMENT
                         value: "true"                        
                       - name: GATE_URL
-                        value: "http://oes-gate.adobe310.opsmx.info/autopilot/api/v3/registerCanary"
+                        value: "http://oes-gate.adobe311.opsmx.info/autopilot/api/v3/registerCanary"
