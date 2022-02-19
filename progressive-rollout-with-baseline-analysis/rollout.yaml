@@ -11,9 +11,9 @@ spec:
   template:
     metadata:
       annotations:
-        prometheus.io/scrape: "true"
-        prometheus_io_path: /mgmt/prometheus
-        prometheus_io_port: "8088"    
+        prometheus.io/scrape: 'true'
+        prometheus_io_path: '/mgmt/prometheus'
+        prometheus_io_port: '8088'    
       labels:
         app: oes-argo-rollout
     spec:
