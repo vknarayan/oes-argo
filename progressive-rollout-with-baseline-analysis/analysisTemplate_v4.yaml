@@ -25,9 +25,7 @@ spec:
                       - name: EXPERIMENT_HASH
                         value: "{{args.experiment-hash}}"
                       - name: BASELINE_HASH
-                        value: "{{args.baseline-hash}}"
-                      - name: BASELINE_POD
-                        value: "{{args.baseline-pod}}"                        
+                        value: "{{args.baseline-hash}}"                        
                       - name: CANARY_HASH
                         value: "{{args.canary-hash}}"
                       - name: LIFETIME_HOURS
