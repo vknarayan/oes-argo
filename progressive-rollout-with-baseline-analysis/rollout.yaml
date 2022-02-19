@@ -60,6 +60,8 @@ spec:
                       podTemplateHashValue: Latest
                   - name: baseline-hash
                     value: "{{templates.baseline.podTemplateHash}}"
+                  - name: baseline-pod
+                    value: "{{templates.baseline.podName}}"                    
                   - name: canary-hash
                     value: "{{templates.canary.podTemplateHash}}"
         - setWeight: 80
