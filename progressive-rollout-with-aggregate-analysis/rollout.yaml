@@ -25,19 +25,6 @@ spec:
             - containerPort: 8088
   strategy:
     canary:
-      analysis:
-        templates:
-          - templateName: oes-analysis-job
-        startingStep: 1
-        args:
-          - name: canary-hash
-            valueFrom:
-              podTemplateHashValue: Latest
-          - name: baseline-hash
-            valueFrom:
-              podTemplateHashValue: Stable
-          - name: experiment-hash
-            value: "dummy-hash-123"
       canaryService: canary-svc
       stableService: production-svc
       trafficRouting:
@@ -46,6 +33,19 @@ spec:
       steps:
         - setWeight: 40
         - pause: { duration: 20s }
+        - analysis:
+            templates:
+              - templateName: oes-analysis-job
+            startingStep: 1
+            args:
+              - name: canary-hash
+                valueFrom:
+                  podTemplateHashValue: Latest
+              - name: baseline-hash
+                valueFrom:
+                  podTemplateHashValue: Stable
+              - name: experiment-hash
+                value: "dummy-hash-123"        
         - setWeight: 60
         - pause: { duration: 20s }
         - setWeight: 80
