@@ -32,7 +32,7 @@ spec:
           stableIngress: prod-ingress
       steps:
         - setWeight: 50
-        - pause: { duration: 20s }
+        - pause: { duration: 2m }
         - analysis:
             templates:
               - templateName: oes-analysis-job
@@ -46,6 +46,30 @@ spec:
               - name: experiment-hash
                 value: "dummy-hash-123"        
         - setWeight: 60
-        - pause: { duration: 20s }
+        - pause: { duration: 2m }
+        - analysis:
+            templates:
+              - templateName: oes-analysis-job
+            args:
+              - name: canary-hash
+                valueFrom:
+                  podTemplateHashValue: Latest
+              - name: baseline-hash
+                valueFrom:
+                  podTemplateHashValue: Stable
+              - name: experiment-hash
+                value: "dummy-hash-123"         
         - setWeight: 80
-        - pause: { duration: 20s }
+        - pause: { duration: 2m }
+        - analysis:
+            templates:
+              - templateName: oes-analysis-job
+            args:
+              - name: canary-hash
+                valueFrom:
+                  podTemplateHashValue: Latest
+              - name: baseline-hash
+                valueFrom:
+                  podTemplateHashValue: Stable
+              - name: experiment-hash
+                value: "dummy-hash-123" 
