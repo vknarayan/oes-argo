@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
         - name: rollouts-baseline
-          image: docker.io/opsmxdev/issuegen:v3.1.0
+          image: docker.io/opsmxdev/issuegen:v3.1.1
           imagePullPolicy: Always
           ports:
             - containerPort: 8088
@@ -45,8 +45,8 @@ spec:
           stableIngress: prod-ingress
       steps:
         - setWeight: 20
-        - pause: { duration: 220s }
+        - pause: { duration: 1m }
         - setWeight: 40
-        - pause: { duration: 220s }
+        - pause: { duration: 1m }
         - setWeight: 80
-        - pause: { duration: 220s }
+        - pause: { duration: 1m }
