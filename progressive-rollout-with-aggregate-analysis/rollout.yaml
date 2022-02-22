@@ -36,7 +36,6 @@ spec:
         - analysis:
             templates:
               - templateName: oes-analysis-job
-            startingStep: 1
             args:
               - name: canary-hash
                 valueFrom:
