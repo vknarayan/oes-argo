@@ -37,6 +37,8 @@ spec:
                       - name: SERVICE_NAME
                         value: "aggregate-analysis"
                       - name: EXPERIMENT
-                        value: "false"                        
+                        value: "false"      
+                      - name: INITIAL_DELAY
+                        value: "2m"                         
                       - name: GATE_URL
                         value: "https://observer-gate.aoa.oes.opsmx.org/autopilot/api/v3/registerCanary"
