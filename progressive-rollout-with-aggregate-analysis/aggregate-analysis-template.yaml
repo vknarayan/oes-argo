@@ -36,6 +36,8 @@ spec:
                         value: "progressiverolloutwithaggregateanalysis"
                       - name: SERVICE_NAME
                         value: "aggregate-analysis"
+                      - name: METRIC_FILTER_KEY
+                        value: "pod_placeholder"  # default "job_name"                        
                       - name: EXPERIMENT
                         value: "false"      
                       - name: INITIAL_DELAY
