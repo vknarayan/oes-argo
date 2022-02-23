@@ -34,10 +34,10 @@ spec:
                         value: "false"
                       - name: APPLICATION
                         value: "progressiverolloutwithbaselineanalysis"
-#                        value: "interpolationtest"
                       - name: SERVICE_NAME
                         value: "baseline-analysis"
-#                        value: "analysis"
+                      - name: METRIC_FILTER_KEY
+                        value: "pod_placeholder"  # default "job_name"                      
                       - name: EXPERIMENT
                         value: "true"                        
                       - name: GATE_URL
