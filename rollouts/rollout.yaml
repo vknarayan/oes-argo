@@ -26,10 +26,10 @@ spec:
             templates:
               - name: baseline
                 specRef: stable
-                replicas: 2
+                replicas: 1
               - name: canary
                 specRef: canary
-                replicas: 2
+                replicas: 1
             analyses:
               - name : oes-analysis-job
                 requiredForCompletion: true
