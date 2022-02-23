@@ -45,7 +45,7 @@ spec:
                   podTemplateHashValue: Stable
               - name: experiment-hash
                 value: "dummy-hash-123"        
-        - setWeight: 80
+        - setWeight: 70
         - pause: { duration: 2m }
         - analysis:
             templates:
