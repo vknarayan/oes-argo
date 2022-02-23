@@ -32,7 +32,7 @@ spec:
           stableIngress: prod-ingress
       steps:
         - setWeight: 50
-        - pause: { duration: 2m }
+        - pause: { duration: 30s }
         - analysis:
             templates:
               - templateName: oes-analysis-job
@@ -46,7 +46,7 @@ spec:
               - name: experiment-hash
                 value: "dummy-hash-123"        
         - setWeight: 70
-        - pause: { duration: 2m }
+        - pause: { duration: 30s }
         - analysis:
             templates:
               - templateName: oes-analysis-job
@@ -60,7 +60,7 @@ spec:
               - name: experiment-hash
                 value: "dummy-hash-123"         
         - setWeight: 90
-        - pause: { duration: 2m }
+        - pause: { duration: 30s }
         - analysis:
             templates:
               - templateName: oes-analysis-job
