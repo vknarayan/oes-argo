@@ -33,15 +33,15 @@ spec:
                       - name: LOG_ENABLED
                         value: "false"
                       - name: APPLICATION
-#                        value: "progressiverolloutwithbaselineanalysis"
-                        value: "interpolationtest"
+                        value: "progressiverolloutwithbaselineanalysis"
+#                        value: "interpolationtest"
                       - name: SERVICE_NAME
-#                        value: "baseline-analysis"
-                        value: "analysis"
+                        value: "baseline-analysis"
+#                        value: "analysis"
                       - name: EXPERIMENT
                         value: "true"                        
                       - name: GATE_URL
-#                        value: "http://oes.adobe311-1.opsmx.info/autopilot/api/v3/registerCanary"
+                        value: "http://oes-gate.adobe311-1.opsmx.info/autopilot/api/v3/registerCanary"
                         #value: "https://observer-gate.aoa.oes.opsmx.org/autopilot/api/v3/registerCanary"
-                        value: "https://oes-release-gate.dev.opsmx.org/autopilot/api/v3/registerCanary"
+                        #value: "https://oes-release-gate.dev.opsmx.org/autopilot/api/v3/registerCanary"
                         
