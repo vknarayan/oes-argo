@@ -41,6 +41,7 @@ spec:
                       - name: EXPERIMENT
                         value: "false"      
                       - name: INITIAL_DELAY
-                        value: "2m"                         
+                        value: "30s"                         
                       - name: GATE_URL
-                        value: "https://observer-gate.aoa.oes.opsmx.org/autopilot/api/v3/registerCanary"
+                        value: http://oes-gate.adobe311-1.opsmx.info/autopilot/api/v3/registerCanary
+                        #value: "https://observer-gate.aoa.oes.opsmx.org/autopilot/api/v3/registerCanary"
