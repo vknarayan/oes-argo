@@ -27,7 +27,7 @@ spec:
     canary:
       steps:
         - setWeight: 20
-        - pause: { duration: 30s }
+        - pause: { duration: 3m }
         - experiment:
             templates:
               - name: baseline
@@ -47,7 +47,7 @@ spec:
                   - name: canary-hash
                     value: "{{templates.canary.podTemplateHash}}"
         - setWeight: 60
-        - pause: { duration: 30s }
+        - pause: { duration: 3m }
         - experiment:
             templates:
               - name: baseline
@@ -67,7 +67,7 @@ spec:
                   - name: canary-hash
                     value: "{{templates.canary.podTemplateHash}}"
         - setWeight: 80
-        - pause: { duration: 30s }
+        - pause: { duration: 3m }
         - experiment:
             templates:
               - name: baseline
