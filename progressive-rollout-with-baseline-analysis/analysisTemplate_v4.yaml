@@ -39,7 +39,9 @@ spec:
                       - name: METRIC_FILTER_KEY
                         value: "pod_placeholder"  # default "job_name"                      
                       - name: EXPERIMENT
-                        value: "true"                        
+                        value: "true"
+                      - name: INITIAL_DELAY
+                        value: "90s"
                       - name: GATE_URL
                         value: "http://oes-gate.adobe311-1.opsmx.info/autopilot/api/v3/registerCanary"
                         #value: "https://observer-gate.aoa.oes.opsmx.org/autopilot/api/v3/registerCanary"
