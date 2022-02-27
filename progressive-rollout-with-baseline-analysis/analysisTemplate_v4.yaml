@@ -31,7 +31,7 @@ spec:
                       - name: LIFETIME_HOURS
                         value: "0.05"
                       - name: LOG_ENABLED
-                        value: "false"
+                        value: "true"
                       - name: APPLICATION
                         value: "progressiverolloutwithbaselineanalysis"
                       - name: SERVICE_NAME
