@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: issuegen-svc
+  labels:
+    app: oes-argo-rollout
+spec:
+  selector:
+    app: oes-argo-rollout
+  ports:
+    - port: 3100
+      targetPort: 8088
+  type: ClusterIP

@@ -1,0 +1,51 @@
+kind: AnalysisTemplate
+apiVersion: argoproj.io/v1alpha1
+metadata:
+  name: oes-analysis-job
+spec:
+  args:
+    - name: experiment-hash
+    - name: canary-hash
+    - name: baseline-hash
+    - name: lifetime-hours
+  metrics:
+    - name: oes-analysis-job
+      count: 1
+      provider:
+        job:
+          spec:
+            backoffLimit: 0
+            template:
+              spec:
+                restartPolicy: Never
+                containers:
+                  - name: oes-analysis-job
+                    image: opsmx11/verifyjob:v6
+                    imagePullPolicy: Always
+                    env:
+                      - name: EXPERIMENT_HASH
+                        value: "{{args.experiment-hash}}"
+                      - name: BASELINE_HASH
+                        value: "{{args.baseline-hash}}"                        
+                      - name: CANARY_HASH
+                        value: "{{args.canary-hash}}"
+                      - name: LIFETIME_HOURS
+                        value: "{{args.lifetime-hours}}"
+                      #  value: "0.5"
+                      - name: LOG_ENABLED
+                        value: "true"
+                      - name: APPLICATION
+                        value: "auditanalysis"
+                      - name: SERVICE_NAME
+                        value: "analysis"
+                      - name: METRIC_FILTER_KEY
+                        value: "pod_placeholder"  # default "job_name"                      
+                      - name: EXPERIMENT
+                        value: "true"
+                      - name: INITIAL_DELAY
+                        value: "90s"
+                      - name: GATE_URL
+                        #value: "http://oes-gate.adobe311-1.opsmx.info/autopilot/api/v3/registerCanary"
+                        #value: "https://observer-gate.aoa.oes.opsmx.org/autopilot/api/v3/registerCanary"
+                        #value: "https://oes-release-gate.dev.opsmx.org/autopilot/api/v3/registerCanary"
+                        
