@@ -29,7 +29,8 @@ spec:
                       - name: CANARY_HASH
                         value: "{{args.canary-hash}}"
                       - name: LIFETIME_HOURS
-                        value: "{{args.lifetime-hours}}"            # "0.05"
+                      #  value: "{{args.lifetime-hours}}"
+                        value: "0.05"
                       - name: LOG_ENABLED
                         value: "true"
                       - name: APPLICATION
