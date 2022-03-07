@@ -46,6 +46,8 @@ spec:
                     value: "{{templates.baseline.podTemplateHash}}"                   
                   - name: canary-hash
                     value: "{{templates.canary.podTemplateHash}}"
+                  - name: lifetime-hours
+                    value: "0.1"
         - setWeight: 60
         - pause: { duration: 30s }
         - experiment:
@@ -66,6 +68,8 @@ spec:
                     value: "{{templates.baseline.podTemplateHash}}"                   
                   - name: canary-hash
                     value: "{{templates.canary.podTemplateHash}}"
+                  - name: lifetime-hours
+                    value: "0.15"                    
         - setWeight: 80
         - pause: { duration: 30s }
         - experiment:
@@ -85,4 +89,6 @@ spec:
                   - name: baseline-hash
                     value: "{{templates.baseline.podTemplateHash}}"                   
                   - name: canary-hash
-                    value: "{{templates.canary.podTemplateHash}}"        
+                    value: "{{templates.canary.podTemplateHash}}"
+                  - name: lifetime-hours
+                    value: "0.05"                        
