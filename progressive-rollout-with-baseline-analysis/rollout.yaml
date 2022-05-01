@@ -71,7 +71,7 @@ spec:
                   - name: lifetime-hours
                     value: "0.05"                    
         - setWeight: 80
-        - pause: { duration: 30s }
+        - pause: { duration: 32s }
         - experiment:
             templates:
               - name: baseline
