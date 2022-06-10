@@ -27,7 +27,7 @@ spec:
     canary:
       steps:
         - setWeight: 20
-        - pause: { duration: 30s }
+        - pause: { duration: 31s }
         - experiment:
             templates:
               - name: baseline
