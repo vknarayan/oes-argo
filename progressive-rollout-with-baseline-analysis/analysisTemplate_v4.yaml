@@ -39,7 +39,7 @@ spec:
                       - name: SERVICE_NAME
                         value: "baseline-analysis"
                       - name: METRIC_FILTER_KEY
-                        value: "pod_placeholder"  # default "job_name"                      
+                        value: "job_name"  # default "job_name"                      
                       - name: EXPERIMENT
                         value: "true"
                       - name: INITIAL_DELAY
