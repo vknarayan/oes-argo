@@ -45,5 +45,5 @@ spec:
                       - name: INITIAL_DELAY
                         value: "90s"
                       - name: GATE_URL
-                        value: "http://isdnew.ninja-test.opsmx.net/autopilot/api/v3/registercanary"
+                        value: "https://isdnew.ninja-test.opsmx.net/autopilot/api/v3/registercanary"
                         
