@@ -45,6 +45,6 @@ spec:
                       - name: INITIAL_DELAY
                         value: "90s"
                       - name: GATE_URL
-                        value: "https://observer-ui.aoa.oes.opsmx.org/gate/autopilot/api/v3/registercanary"
+                        value: "https://observer-ui.aoa.oes.opsmx.org/autopilot/api/v3/registercanary"
                       - name: TRIGGER_USER
                         value: admin
