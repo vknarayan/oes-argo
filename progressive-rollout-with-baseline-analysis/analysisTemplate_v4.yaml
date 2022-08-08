@@ -33,7 +33,7 @@ spec:
                         value: "{{args.lifetime-hours}}"
                       #  value: "0.5"
                       - name: LOG_ENABLED
-                        value: "true"
+                        value: "false"
                       - name: APPLICATION
                         value: "progressiverolloutwithbaselineanalysis"
                       - name: SERVICE_NAME
@@ -47,4 +47,4 @@ spec:
                       - name: GATE_URL
                         value: "https://observer-ui.aoa.oes.opsmx.org/gate/autopilot/api/v3/registercanary"
                       - name: TRIGGER_USER
-                        value: admin
+                        value: user2
