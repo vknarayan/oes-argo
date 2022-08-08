@@ -20,7 +20,7 @@ spec:
                 restartPolicy: Never
                 containers:
                   - name: oes-analysis-job
-                    image: luthan/verifyjob:v6
+                    image: opsmx11/verifyjob:v7
                     imagePullPolicy: Always
                     env:
                       - name: EXPERIMENT_HASH
