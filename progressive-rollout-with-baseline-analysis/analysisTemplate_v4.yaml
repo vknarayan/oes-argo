@@ -48,3 +48,7 @@ spec:
                         value: "https://observer-ui.aoa.oes.opsmx.org/gate/autopilot/api/v3/registerCanary"
                       - name: TRIGGER_USER
                         value: user2
+                      - name: MINIMUM_SUCCESS_SCORE
+                        value: 10
+                      - name: CANARY_SUCCESS_SCORE
+                        value: 80                        
