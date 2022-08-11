@@ -49,6 +49,6 @@ spec:
                       - name: TRIGGER_USER
                         value: user2
                       - name: MINIMUM_SUCCESS_SCORE
-                        value: "10"
+                        value: 10
                       - name: CANARY_SUCCESS_SCORE
                         value: "80"                        
