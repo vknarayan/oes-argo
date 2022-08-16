@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
         - name: rollouts-baseline
-          image: quay.io/opsmxpublic/canary-issuegen:issue-canary-gen-1324
+          image: quay.io/opsmxpublic/canary-issuegen:issue-canary-gen-1325
           imagePullPolicy: Always
           ports:
             - containerPort: 8088
