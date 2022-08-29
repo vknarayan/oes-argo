@@ -15,6 +15,7 @@ spec:
     spec:
       containers:
       - image: quay.io/opsmxpublic/canary-issuegen:issue-canary-gen-1325
+        imagePullPolicy: Always
         name: loggen
         ports:
         - containerPort: 8088
