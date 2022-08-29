@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: loggen
+spec:
+  ports:
+  - port: 3100
+    targetPort: 8088
+  selector:
+    app: loggen
