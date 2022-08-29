@@ -14,7 +14,7 @@ spec:
         app: loggen
     spec:
       containers:
-      - image: quay.io/opsmxpublic/canary-issuegen:issue-canary-gen-1325
+      - image: quay.io/opsmxpublic/canary-issuegen:issue-canary-gen-1326
         imagePullPolicy: Always
         name: loggen
         ports:
