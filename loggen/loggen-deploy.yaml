@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: loggen
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: loggen
+  template:
+    metadata:
+      labels:
+        app: loggen
+    spec:
+      containers:
+      - image: quay.io/opsmxpublic/canary-issuegen:issue-canary-gen-1325
+        name: loggen
+        ports:
+        - containerPort: 8088
