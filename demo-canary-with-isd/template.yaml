@@ -22,11 +22,10 @@ spec:
           services:
           - serviceName: issuegensvc
             metricTemplateName: PrometheusVerificationForISDCanary
-            metricTemplateVersion: "v3.0"
             metricScopeVariables: "${namespace_key},${pod_key},${app_name}"
-            baselineMetricScope: "metricdriver,{{args.baseline-hash}},demoapp-issuegen"
-            canaryMetricScope: "metricdriver,{{args.canary-hash}},demoapp-issuegen"
-            logTemplateName: ElasticVerificationForCanary
+            baselineMetricScope: "metricdriver,.*{{args.baseline-hash}}.*,demoapp-issuegen"
+            canaryMetricScope: "metricdriver,.*{{args.canary-hash}}.*,demoapp-issuegen"
+            logTemplateName: ElasticVerificationForISDCanary
             logScopeVariables: "kubernetes.pod_name"
             baselineLogScope: ".*{{args.baseline-hash}}.*"
             canaryLogScope: ".*{{args.canary-hash}}.*"
