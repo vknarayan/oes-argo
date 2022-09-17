@@ -4,7 +4,7 @@ metadata:
   name: issuegen-service
 spec:
   selector:
-    app: issuegen
+    app: demoapp-issuegen
   ports:
   - protocol: TCP
     port: 80
