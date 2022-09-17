@@ -21,7 +21,7 @@ spec:
             marginal: 60
           services:
           - serviceName: issuegensvc
-            metricTemplateName: PrometheusVerificationForISDCanaryV2
+            metricTemplateName: PrometheusVerificationISDTemplate
             metricScopeVariables: "${namespace_key},${pod_key},${app_name}"
             baselineMetricScope: "metricdriver,.*{{args.baseline-hash}}.*,demoapp-issuegen"
             canaryMetricScope: "metricdriver,.*{{args.canary-hash}}.*,demoapp-issuegen"
