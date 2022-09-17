@@ -22,6 +22,7 @@ spec:
           services:
           - serviceName: issuegensvc
             metricTemplateName: PrometheusVerificationForCanary
+            metricTemplateVersion: "v3.0"
             metricScopeVariables: "${namespace_key},${pod_key},${app_name}"
             baselineMetricScope: "metricdriver,{{args.baseline-hash}},demoapp-issuegen"
             canaryMetricScope: "metricdriver,{{args.canary-hash}},demoapp-issuegen"
