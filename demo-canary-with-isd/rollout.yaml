@@ -7,7 +7,7 @@ spec:
   revisionHistoryLimit: 2
   selector:
     matchLabels:
-      app: issuegen
+      app: demoapp-issuegen
   template:
     metadata:
       annotations:
