@@ -15,7 +15,7 @@ spec:
           gateUrl: https://isd.oea.opsmx.net/
           application: issuegenapp-canary
           user: admin
-          lifetimeHours: "0.1"
+          lifetimeHours: "0.05"
           threshold:
             pass: 80
             marginal: 60
