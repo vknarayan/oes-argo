@@ -15,7 +15,7 @@ spec:
         prometheus_io_path: '/mgmt/prometheus'
         prometheus_io_port: '8088'    
       labels:
-        app: issuegen
+        app: demoapp-issuegen
     spec:
       containers:
         - name: rollouts-baseline
